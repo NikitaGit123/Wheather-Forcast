@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Weather App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">About Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Weather for <span id="cityName"><Quickly build/span></h1>
+            <p class="fs-5 text-muted">Weather radar, wind and waves forecast for kiters, surfers, paragliders, pilots, sailors and anyone else. Worldwide animated weather map, with easy to use ...</p>
+          </div>
+      </div>
+      <div class="container">
+        <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Wind-Speed</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4 cardList">
+              <li>Wind Speed is:<span id="wind_speed"></span></li>
+              <li>wind degrees:<span id="wind_degrees"></span></li>
+              <li>Feels like:<span id="feels_like"></span></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Check More City</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Temprature</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4 cardList">
+              <li>Temprature:<span id="temp"></span></li>
+              <li>Min-Temprature<span id="min_temp"></span></li>
+              <li>Max-Temprature <span id="max_temp"></span></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Check More City</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Weather Condition</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4 cardList">
+              <li>Humidity:<span id="humidity"></span></li>
+              <li>sunrise:<span id="sunrise"></span></li>
+              <li>Sunset<span id="sunset"></span></li>
+              <!-- <li>cloud_pct:<span id="cloud_pct"></span></li> -->
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Check More City</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="display-6 text-center mb-4">Weathers For Other Cities</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">sunset</th>
+            <th style="width: 22%;">min_temp</th>
+            <th style="width: 22%;">max_temp</th>
+          </tr>
+        </thead>
+        <tbody id="outerdata">
+          
+        </tbody>
+      </table>
+    </div>
+  </main>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
